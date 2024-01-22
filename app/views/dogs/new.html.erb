@@ -1,0 +1,20 @@
+<!-- app/views/dogs/new.html.erb -->
+<%= form_with(model: @dog, url: dogs_path, method: :post, local: true, remote: true, html: { class: 'custom-form' }) do |form| %>
+<div class="form-group mb-3">
+  <%= form.label :breed, class: 'form-label' %>
+  <%= form.select :breed, [['Select Dog Breed', nil]] + @dog_breeds.map { |breed| [breed, breed] }, {}, class: 'form-control custom-input' %>
+</div>
+
+  <%= form.submit 'Submit', class: 'btn btn-primary custom-btn' %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %> alert-dismissible fade show" role="alert">
+    <%= value %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+
+<div id="dog-info-container">
+  <%= render 'dog_info', locals: { dog: @dog, dog_image: @dog_image } %>
+</div>

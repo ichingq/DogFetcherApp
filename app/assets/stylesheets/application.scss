@@ -1,0 +1,41 @@
+// app/assets/stylesheets/application.scss
+
+@import "bootstrap";
+
+body {
+  background-color: #f0f5fb; /* Light blue background */
+}
+
+.custom-form {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 15px; /* Curvy edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.form-label {
+  color: #3498db; /* Main blue color for labels */
+}
+
+.custom-input {
+  border: 1px solid #3498db; /* Main blue border for input */
+  border-radius: 8px; /* Slightly curvy input edges */
+}
+
+.custom-btn {
+  background-color: #3498db; /* Main blue color for button */
+  border: none;
+  border-radius: 10px; /* More curvy button edges */
+}
+
+.alert {
+  border-radius: 10px; /* Curvy edges for alerts */
+}
+
+.alert-success {
+  background-color: #d4edda; /* Success alert background color */
+  border-color: #c3e6cb; /* Success alert border color */
+  color: #155724; /* Success alert text color */
+}

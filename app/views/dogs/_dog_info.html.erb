@@ -1,0 +1,6 @@
+<!-- app/views/dogs/_dog_info.html.erb -->
+<% if @dog_image.present? %>
+  <p><strong>Breed:</strong> <%= @dog.breed %></p>
+  <img src="<%= @dog_image %>" alt="Dog Image">
+
+<% end %>
