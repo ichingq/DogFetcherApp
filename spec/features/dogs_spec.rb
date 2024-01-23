@@ -15,5 +15,6 @@ RSpec.feature 'Dog Submissions', type: :feature do
 
     # Expect the success flash message
     expect(page).to have_content('Dog breed submitted successfully!')
+    expect(page).to have_css('img[src^="https://images.dog.ceo/breeds/"]')
   end
 end
