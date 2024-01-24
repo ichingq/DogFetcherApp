@@ -18,7 +18,7 @@ class DogsController < ApplicationController
 
     if @dog.save
       @dog_image = fetch_dog_image(@dog.breed)
-      flash[:success] = 'Dog breed submitted successfully!'
+      flash[:success] = 'Dog breed requested successfully!'
       respond_to do |format|
         format.html { render :new, locals: { dog: @dog, dog_image: @dog_image, dog_breeds: @dog_breeds } }
         format.js   
